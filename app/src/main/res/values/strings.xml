@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Fixtter_User_Android</string>
+    <string name="inicio_bienvenido">Bienvenido a:</string>
+    <string name="inicio_iniciosesion">Iniciar Sesion</string>
+    <string name="inicio_nuevousuario">Crear Cuenta</string>
+    <string name="inicio_llamar">Llamar ahora</string>
 </resources>
