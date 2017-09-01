@@ -4,4 +4,24 @@
     <string name="inicio_iniciosesion">Iniciar Sesion</string>
     <string name="inicio_nuevousuario">Crear Cuenta</string>
     <string name="inicio_llamar">Llamar ahora</string>
+
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="signin_tipo_crearusuario">Creacion de cuenta:</string>
+    <string name="signin_crear_usuario">Crea una cuenta en Fixtter mediante:</string>
+    <string name="signin_btnfacebook">Facebook</string>
+    <string name="singin_btnemail">correo electrónico</string>
+
+    <string name="facebook_app_id">132708830681243</string>
+    <string name="fb_login_protocol_scheme">fb132708830681243</string>
+
+    <string name="crearusuario_titulo">Crear Usuario</string>
+    <string name="crearusuario_nombre">Nombre</string>
+    <string name="crearusuario_apellido">Apellido</string>
+    <string name="crearusuario_celular">Celular</string>
+    <string name="crearusuario_pais">Pais</string>
+    <string name="crearusuario_correo">Correo</string>
+    <string name="crearusuario_contraseña">Contrasena</string>
+    <string name="crearusuario_btnregistrar">Registrar</string>
+
 </resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="com.fixtter.sgtel.fixtter_user_android.Activity_CrearUsuario">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="@string/crearusuario_titulo"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="90dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/fixtterlogo" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_border_edittext"
+            android:gravity="center"
+            android:inputType="text"
+            android:hint="@string/crearusuario_nombre"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_border_edittext"
+            android:gravity="center"
+            android:inputType="text"
+            android:hint="@string/crearusuario_apellido"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_border_edittext"
+            android:gravity="center"
+            android:inputType="number"
+            android:hint="@string/crearusuario_celular"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            android:background="@drawable/rounded_spinner"
+            android:layout_marginBottom="10dp"
+            android:layout_height="30dp">
+
+        </Spinner>
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_border_edittext"
+            android:gravity="center"
+            android:inputType="text"
+            android:hint="@string/crearusuario_correo"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_border_edittext"
+            android:gravity="center"
+            android:inputType="textPassword"
+            android:hint="@string/crearusuario_contraseña"
+            android:textSize="20sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorAccent"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:text="@string/crearusuario_btnregistrar"
+                android:textColor="@color/colorWhite" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
