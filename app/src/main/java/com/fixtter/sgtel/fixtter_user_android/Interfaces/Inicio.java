@@ -1,4 +1,4 @@
-package com.fixtter.sgtel.fixtter_user_android;
+package com.fixtter.sgtel.fixtter_user_android.Interfaces;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.fixtter.sgtel.fixtter_user_android.R;
+import com.fixtter.sgtel.fixtter_user_android.Servicios.Volley_Servicio;
 
 public class Inicio extends AppCompatActivity {
 
@@ -18,15 +21,20 @@ public class Inicio extends AppCompatActivity {
         btn_crearcuenta = (Button) findViewById(R.id.btn_crearcuenta);
         btn_login = (Button) findViewById(R.id.btn_login);
         listeners();
+
     }
     public void listeners(){
         btn_llamada.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {/*
 
                 String phone = "+51993936066";
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-                startActivity(intent);
+                startActivity(intent);*/
+
+                Volley_Servicio servicio = new Volley_Servicio(getApplicationContext());
+                servicio.GET_CUSTOMERS();
+
             }
         });
         btn_crearcuenta.setOnClickListener(new View.OnClickListener() {

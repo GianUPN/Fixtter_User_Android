@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
-            android:name=".Inicio"
+            android:name=".Interfaces.Inicio"
             android:screenOrientation="portrait"
             android:theme="@style/Inicio">
             <intent-filter>
@@ -21,7 +21,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity_TipoCreacionUsuario"
+            android:name=".Interfaces.Activity_TipoCreacionUsuario"
             android:label="@string/signin_tipo_crearusuario"
             android:theme="@style/AppTheme.NoActionBar" />
 
@@ -45,7 +45,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_CrearUsuario"
+        <activity android:name=".Interfaces.Activity_CrearUsuario"
             android:label="@string/crearusuario_titulo"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>

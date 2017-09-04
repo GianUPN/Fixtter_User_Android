@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    tools:context="com.fixtter.sgtel.fixtter_user_android.Inicio">
+    tools:context="com.fixtter.sgtel.fixtter_user_android.Interfaces.Inicio">
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"

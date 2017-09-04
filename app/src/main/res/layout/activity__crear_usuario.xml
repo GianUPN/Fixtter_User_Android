@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorWhite"
-    tools:context="com.fixtter.sgtel.fixtter_user_android.Activity_CrearUsuario">
+    tools:context="com.fixtter.sgtel.fixtter_user_android.Interfaces.Activity_CrearUsuario">
     <android.support.design.widget.AppBarLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -40,8 +40,8 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_border_edittext"
             android:gravity="center"
-            android:inputType="text"
             android:hint="@string/crearusuario_nombre"
+            android:inputType="text"
             android:textSize="20sp" />
 
         <EditText
@@ -52,41 +52,8 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_border_edittext"
             android:gravity="center"
-            android:inputType="text"
             android:hint="@string/crearusuario_apellido"
-            android:textSize="20sp" />
-
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/rounded_border_edittext"
-            android:gravity="center"
-            android:inputType="number"
-            android:hint="@string/crearusuario_celular"
-            android:textSize="20sp" />
-
-        <Spinner
-            android:layout_width="250dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:spinnerMode="dropdown"
-            android:background="@drawable/rounded_spinner"
-            android:layout_marginBottom="10dp"
-            android:layout_height="30dp">
-
-        </Spinner>
-
-        <EditText
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/rounded_border_edittext"
-            android:gravity="center"
             android:inputType="text"
-            android:hint="@string/crearusuario_correo"
             android:textSize="20sp" />
 
         <EditText
@@ -96,19 +63,54 @@
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_border_edittext"
             android:gravity="center"
-            android:inputType="textPassword"
-            android:hint="@string/crearusuario_contraseña"
+            android:hint="@string/crearusuario_celular"
+            android:inputType="number"
             android:textSize="20sp" />
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_spinner"
+            android:gravity="center"
+            android:spinnerMode="dropdown">
+
+        </android.support.v7.widget.AppCompatSpinner>
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_border_edittext"
+            android:gravity="center"
+            android:hint="@string/crearusuario_correo"
+            android:inputType="text"
+            android:textSize="20sp" />
+
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_border_edittext"
+            android:gravity="center"
+            android:hint="@string/crearusuario_contraseña"
+            android:inputType="textPassword"
+            android:textSize="20sp" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <Button
-                android:layout_alignParentBottom="true"
-                android:background="@color/colorAccent"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
                 android:layout_gravity="center_horizontal|bottom"
+                android:background="@color/colorAccent"
                 android:text="@string/crearusuario_btnregistrar"
                 android:textColor="@color/colorWhite" />
         </RelativeLayout>

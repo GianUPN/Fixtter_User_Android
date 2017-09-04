@@ -1,8 +1,10 @@
-package com.fixtter.sgtel.fixtter_user_android;
+package com.fixtter.sgtel.fixtter_user_android.Interfaces;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+
+import com.fixtter.sgtel.fixtter_user_android.R;
 
 public class Activity_CrearUsuario extends AppCompatActivity {
 

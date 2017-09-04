@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     android:orientation="vertical"
-    tools:context="com.fixtter.sgtel.fixtter_user_android.Activity_TipoCreacionUsuario">
+    tools:context="com.fixtter.sgtel.fixtter_user_android.Interfaces.Activity_TipoCreacionUsuario">
     <android.support.design.widget.AppBarLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
