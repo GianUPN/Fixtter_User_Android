@@ -6,6 +6,7 @@
 
     <application
         android:allowBackup="true"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -45,10 +46,16 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-        <activity android:name=".Interfaces.Activity_CrearUsuario"
+        <activity
+            android:name=".Interfaces.Activity_CrearUsuario"
             android:label="@string/crearusuario_titulo"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Interfaces.Navegacion_Principal"
+            android:label="@string/title_activity_navegacion__principal"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Interfaces.Activity_Login"
+            android:theme="@style/AppTheme.NoActionBar" ></activity>
     </application>
 
 </manifest>

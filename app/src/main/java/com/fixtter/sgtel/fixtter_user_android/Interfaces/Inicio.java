@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.fixtter.sgtel.fixtter_user_android.R;
-import com.fixtter.sgtel.fixtter_user_android.Servicios.Volley_Servicio;
 
 public class Inicio extends AppCompatActivity {
 
@@ -26,21 +25,23 @@ public class Inicio extends AppCompatActivity {
     public void listeners(){
         btn_llamada.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {/*
-
+            public void onClick(View v) {
                 String phone = "+51993936066";
                 Intent intent = new Intent(Intent.ACTION_DIAL, Uri.fromParts("tel", phone, null));
-                startActivity(intent);*/
-
-                Volley_Servicio servicio = new Volley_Servicio(getApplicationContext());
-                servicio.GET_CUSTOMERS();
-
+                startActivity(intent);
             }
         });
         btn_crearcuenta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), Activity_TipoCreacionUsuario.class);
+                startActivity(intent);
+            }
+        });
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Activity_Login.class);
                 startActivity(intent);
             }
         });
