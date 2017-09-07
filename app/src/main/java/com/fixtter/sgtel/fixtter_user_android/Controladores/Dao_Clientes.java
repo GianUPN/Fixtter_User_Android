@@ -21,6 +21,11 @@ public class Dao_Clientes extends Volley_Servicio{
     }
 
     @Override
+    public void Get_elemento_propiedades(String propiedades,String a,VolleyResponseListener request) {
+        super.Get_elemento_propiedades(propiedades, Codigos.GET_CLIENTES_PROPIEDADES,request);
+    }
+
+    @Override
     public void Set_elemento(Map<String,String> map, String a, VolleyResponseListener request) {
         super.Set_elemento(map, Codigos.SET_CLIENTES,request);
     }

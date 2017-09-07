@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            android:title="@string/signin_tipo_crearusuario"
+            android:title="@string/login_tittle"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
@@ -61,6 +61,7 @@
             android:layout_marginBottom="20dp"
             android:textColor="@color/colorBlack"/>
         <EditText
+            android:id="@+id/txt_correo"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -71,7 +72,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/txt_pass"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"

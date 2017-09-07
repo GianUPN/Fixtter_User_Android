@@ -64,7 +64,7 @@ public class Volley_Servicio{
                     }
             );
             // add it to the RequestQueue
-            getrequest.setRetryPolicy(new DefaultRetryPolicy(9000,
+            getrequest.setRetryPolicy(new DefaultRetryPolicy(90000,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                     DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
             //time MS
@@ -74,6 +74,43 @@ public class Volley_Servicio{
             e.printStackTrace();
         }
         }
+
+    public void Get_elemento_propiedades(String parametros,String tabla,final VolleyResponseListener request){
+        try {
+            //evitar SSL
+            nuke();// Eliminar esto cuando se publique el servidor.
+            // Crear nueva cola de peticiones
+            RequestQueue requestQueue = Volley.newRequestQueue(context);
+            String URL = url + tabla + parametros +"&" + TOKEN;
+            JsonArrayRequest getrequest = new JsonArrayRequest(Request.Method.GET, URL, null,
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+                            // muestra response
+                            Log.d("Response", response.toString());
+                            request.onResponse(response);
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            //muestra error
+                            Log.d("Error.Response", error.toString());
+                            request.onError(error);
+                        }
+                    }
+            );
+            // add it to the RequestQueue
+            getrequest.setRetryPolicy(new DefaultRetryPolicy(10000,
+                    10,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            //time MS
+            requestQueue.add(getrequest);
+            requestQueue.start();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     public void Set_elemento(final Map<String,String> map, String tabla, final VolleyResponseListener request){
         try {
@@ -103,7 +140,7 @@ public class Volley_Servicio{
                 protected Map<String, String> getParams()
                 { return map;  }
             };
-            postRequest.setRetryPolicy(new DefaultRetryPolicy(9000,
+            postRequest.setRetryPolicy(new DefaultRetryPolicy(90000,
                     DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
                     DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
             requestQueue.add(postRequest);

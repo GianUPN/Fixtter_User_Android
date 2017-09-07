@@ -3,6 +3,8 @@ package com.fixtter.sgtel.fixtter_user_android.Interfaces;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -50,7 +52,15 @@ public class Navegacion_Principal extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            FragmentManager fm = getSupportFragmentManager();
+            if (fm.getBackStackEntryCount() > 0) {
+                Log.i("Navegacion Principal", "popping backstack");
+                fm.popBackStack();
+            } else {
+                Log.i("Navegacion Principal", "nothing on backstack, calling super");
+                super.onBackPressed();
+            }
+
         }
     }
 

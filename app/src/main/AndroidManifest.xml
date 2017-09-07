@@ -55,7 +55,8 @@
             android:label="@string/title_activity_navegacion__principal"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Interfaces.Activity_Login"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+            android:label="@string/login_tittle"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

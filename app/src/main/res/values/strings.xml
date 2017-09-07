@@ -26,8 +26,13 @@
     <string name="title_activity_navegacion__principal">Flixtter</string>
 
     <string name="login_desc">Inicie sesion mediante:</string>
+    <string name="login_tittle">Iniciar Sesión</string>
     <string name="login_olvido">Olvide mi contraseña</string>
     <string name="login_o">o mediante:</string>
+
+    <string name="Nav_solicitar">Pedir un Fixtter</string>
+    <string name="Nav_mispedidos">Mis pedidos</string>
+    <string name="Nav_detalle">La ayuda de confianza que necesitas</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

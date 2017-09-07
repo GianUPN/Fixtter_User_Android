@@ -9,19 +9,16 @@
                     android:width="2dp"
                     android:color="@color/colorPrimary"
                     />
+                <padding
+                    android:left="3dp"
+                    android:top="3dp"
+                    android:right="5dp"
+                    android:bottom="3dp" />
             </shape>
         </item>
         <item>
-            <vector
-                android:width="24dp"
-                android:height="24dp"
-                android:gravity="center_vertical|right"
-                android:viewportWidth="24.0"
-                android:viewportHeight="24.0">
-                <path
-                    android:fillColor="@color/colorPrimary"
-                    android:pathData="M7.41,7.84L12,12.42l4.59,-4.58L18,9.25l-6,6 -6,-6z"/>
-            </vector>
+            <bitmap android:src="@drawable/arrowdown"
+                android:gravity="center|right" />
         </item>
     </layer-list>
     </item>

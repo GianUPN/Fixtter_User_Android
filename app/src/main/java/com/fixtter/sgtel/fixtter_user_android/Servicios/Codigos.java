@@ -15,6 +15,7 @@ public class Codigos {
     public static String SET_PRODUCTOS = "products?";
 
     /* CLIENTES */
+    public static String GET_CLIENTES_PROPIEDADES = "customers?";
     public static String GET_CLIENTES_ID = "customers/";
     public static String GET_CLIENTES_ALL = "customers?";
     public static String GET_CLIENTES_PAGE = "customers?page=";
