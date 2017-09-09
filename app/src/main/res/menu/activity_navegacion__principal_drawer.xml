@@ -3,23 +3,23 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_inicio"
             android:icon="@drawable/ic_menu_back"
             android:title="Inicio" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_editar"
             android:icon="@drawable/ic_menu_manage"
             android:title="Configuración" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_camara"
             android:icon="@drawable/ic_menu_camera"
             android:title="Cámara" />
         <item
-            android:id="@+id/nav_country"
+            android:id="@+id/nav_pais"
             android:icon="@drawable/ic_pais"
             android:title="País" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/nav_logout"
             android:icon="@drawable/ic_logout"
             android:title="Salir" />
     </group>

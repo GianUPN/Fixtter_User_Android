@@ -33,10 +33,14 @@
     <string name="Nav_solicitar">Pedir un Fixtter</string>
     <string name="Nav_mispedidos">Mis pedidos</string>
     <string name="Nav_detalle">La ayuda de confianza que necesitas</string>
+    <string name="Nav_Categorias">Categorías</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

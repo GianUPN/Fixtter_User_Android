@@ -157,6 +157,7 @@ public class Activity_Login extends AppCompatActivity {
                 //startActivity(intent);
                 Dao_Clientes dao_clientes = new Dao_Clientes(getApplicationContext());
                 String propiedades = "email=" + txt_correo.getText().toString() + "&password="+txt_pass.getText().toString();
+                btn_correo.setEnabled(false);
                 dao_clientes.Get_elemento_propiedades(propiedades, "", new Volley_Servicio.VolleyResponseListener() {
                     @Override
                     public void onError(VolleyError message) {
@@ -164,11 +165,14 @@ public class Activity_Login extends AppCompatActivity {
                         if(message instanceof NoConnectionError){
                             Snackbar.make(getWindow().getDecorView().getRootView(), "Error de conexion", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
+                            btn_correo.callOnClick();
                         } else
                         if(message instanceof TimeoutError){
                             Snackbar.make(getWindow().getDecorView().getRootView(), "Exceso de tiempo de espera", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
-                        }
+                            btn_correo.setEnabled(true);
+                        }else{
+                        btn_correo.setEnabled(true);}
                     }
 
                     @Override
