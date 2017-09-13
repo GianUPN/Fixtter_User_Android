@@ -1,7 +1,6 @@
 package com.fixtter.sgtel.fixtter_user_android.Interfaces;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,7 +47,8 @@ public class Activity_Login extends AppCompatActivity {
 
                 Dao_Clientes dao_clientes = new Dao_Clientes(getApplicationContext());
                 String propiedades = "email=" + email;
-                dao_clientes.Get_elemento_propiedades(propiedades, "", new Volley_Servicio.VolleyResponseListener() {
+                dao_clientes.Get_elemento_filtro(propiedades, "",
+                new Volley_Servicio.VolleyResponseListener() {
                     @Override
                     public void onError(VolleyError message) {
                         System.out.println(message.toString());
@@ -158,7 +158,7 @@ public class Activity_Login extends AppCompatActivity {
                 Dao_Clientes dao_clientes = new Dao_Clientes(getApplicationContext());
                 String propiedades = "email=" + txt_correo.getText().toString() + "&password="+txt_pass.getText().toString();
                 btn_correo.setEnabled(false);
-                dao_clientes.Get_elemento_propiedades(propiedades, "", new Volley_Servicio.VolleyResponseListener() {
+                dao_clientes.Get_elemento_filtro(propiedades, "", new Volley_Servicio.VolleyResponseListener() {
                     @Override
                     public void onError(VolleyError message) {
                         System.out.println(message.toString());
@@ -204,11 +204,13 @@ public class Activity_Login extends AppCompatActivity {
             }
         });
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
     }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

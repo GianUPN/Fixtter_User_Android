@@ -1,12 +1,19 @@
-package com.fixtter.sgtel.fixtter_user_android;
+package com.fixtter.sgtel.fixtter_user_android.Adaptadores;
 
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.RelativeLayout;
+
+import com.fixtter.sgtel.fixtter_user_android.Entidades.Categorias;
+import com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_Elegir_Fixtter;
+import com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_Menu_Categorias;
+import com.fixtter.sgtel.fixtter_user_android.R;
+
 import java.util.List;
 
 
@@ -47,9 +54,23 @@ public class Adapter_Categorias extends RecyclerView.Adapter<Adapter_Categorias.
     }
 
     @Override
-    public void onBindViewHolder(ListaViewHolder viewHolder, int i) {
+    public void onBindViewHolder(ListaViewHolder viewHolder, final int i) {
         //AQUI VAN TODOS LOS ELEMENTOS DE LA LISTA.
         viewHolder.btn_card.setText(items.get(i).getNombre());
+        viewHolder.btn_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = Fragment_Elegir_Fixtter.newInstance(items.get(i).getNombre(),
+                        items.get(i).getNombre());
+                Bundle bundle = fragment.getArguments();
+                fragment.setArguments(bundle);
+                fragmentManager
+                        .beginTransaction()
+                        .add(R.id.main_content, fragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
     }
 }

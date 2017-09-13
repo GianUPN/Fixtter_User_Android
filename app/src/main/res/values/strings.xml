@@ -34,7 +34,8 @@
     <string name="Nav_mispedidos">Mis pedidos</string>
     <string name="Nav_detalle">La ayuda de confianza que necesitas</string>
     <string name="Nav_Categorias">Categorías</string>
-
+    <string name="card_reservar">Reservar</string>
+    <string name="card_info">Más info</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 

@@ -31,6 +31,7 @@ public class Volley_Servicio{
     private static final String CLAVE_CLIENTE = "ck_0b6e946fd3720e02a6b865c287bac197ddbd56ed";
     private static final String CLAVE_SECRET = "cs_31fbd5b8a41b9eb34ea24b94005ab4833a128393";
     private static final String url = "https://www.fixtter.com.pe/wp-json/wc/v2/";
+    private static final String url_2 = "https://www.fixtter.com.pe/wp-json/wc/v1/";
     private static final String TOKEN = "consumer_key=" + CLAVE_CLIENTE + "&consumer_secret=" + CLAVE_SECRET;
     private Context context;
 
@@ -112,10 +113,49 @@ public class Volley_Servicio{
         }
     }
 
-
-    public void Get_elemento_propiedades(String parametros,String tabla,final VolleyResponseListener request){
+    //TODO: EXCEPCION PARA LISTADO DE FIXTTERS POR CATEGORIA
+    public void Get_lista_pagina_filtro_V1(int pagina, String parametros,String tabla,final VolleyResponseListener request){
         try {
-            //evitar SSL
+            //SOLO EN LA VERSION V1 FUNCIONA EL FILTRO[PRODUCT_CAT]
+            //TENER EN CUENTA LAS FUTURAS VERSIONES DE WOOCOMMERCE EN GITHUB.
+
+            nuke();// Eliminar esto cuando se publique el servidor.
+            // Crear nueva cola de peticiones
+            RequestQueue requestQueue = Volley.newRequestQueue(context);
+            String URL = url_2 + tabla + pagina+"&"+parametros +"&" + TOKEN;
+            JsonArrayRequest getrequest = new JsonArrayRequest(Request.Method.GET, URL, null,
+                    new Response.Listener<JSONArray>() {
+                        @Override
+                        public void onResponse(JSONArray response) {
+                            // muestra response
+                            Log.d("Response", response.toString());
+                            request.onResponse(response);
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            //muestra error
+                            Log.d("Error.Response", error.toString());
+                            request.onError(error);
+                        }
+                    }
+            );
+            // add it to the RequestQueue
+            getrequest.setRetryPolicy(new DefaultRetryPolicy(10000,
+                    10,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            //time MS
+            requestQueue.add(getrequest);
+            requestQueue.start();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    //TODO: EXCEPCION PARA LOGIN
+    public void Get_elemento_filtro(String parametros, String tabla, final VolleyResponseListener request){
+        try {
             nuke();// Eliminar esto cuando se publique el servidor.
             // Crear nueva cola de peticiones
             RequestQueue requestQueue = Volley.newRequestQueue(context);

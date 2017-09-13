@@ -24,6 +24,11 @@ public class Dao_Products extends Volley_Servicio{
     }
 
     @Override
+    public void Get_lista_pagina_filtro_V1(int pagina,String parametros,String tabla,VolleyResponseListener request) {
+        super.Get_lista_pagina_filtro_V1(pagina,parametros,Codigos.GET_PRODUCTOS_PAGE,request);
+    }
+
+    @Override
     public void Set_elemento(Map<String,String> map,String a,VolleyResponseListener request) {
         super.Set_elemento(map, Codigos.SET_PRODUCTOS,request);
     }

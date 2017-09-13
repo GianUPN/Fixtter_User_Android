@@ -3,7 +3,6 @@ package com.fixtter.sgtel.fixtter_user_android.Interfaces;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,8 +11,8 @@ import android.view.ViewGroup;
 
 import com.android.volley.NoConnectionError;
 import com.android.volley.VolleyError;
-import com.fixtter.sgtel.fixtter_user_android.Adapter_Categorias;
-import com.fixtter.sgtel.fixtter_user_android.Categorias;
+import com.fixtter.sgtel.fixtter_user_android.Adaptadores.Adapter_Categorias;
+import com.fixtter.sgtel.fixtter_user_android.Entidades.Categorias;
 import com.fixtter.sgtel.fixtter_user_android.Controladores.Dao_Categorias;
 import com.fixtter.sgtel.fixtter_user_android.R;
 import com.fixtter.sgtel.fixtter_user_android.Servicios.Volley_Servicio;
@@ -25,12 +24,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fragment_Menu_Categorias extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+    // TODO: VARIABLES Y PARAMETROS
     private String mParam1;
     private String mParam2;
     RecyclerView recycler_categorias;
@@ -44,12 +42,9 @@ public class Fragment_Menu_Categorias extends Fragment {
     }
 
     /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
+     * ELEGIR CATEGORIAS DE LOS FIXTTERS
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragment_Menu_Categorias.
+     *
      */
     // TODO: Rename and change types and number of parameters
     public static Fragment_Menu_Categorias newInstance(String param1, String param2) {

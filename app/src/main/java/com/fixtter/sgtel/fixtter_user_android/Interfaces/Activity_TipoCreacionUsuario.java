@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
-import com.android.volley.ExecutorDelivery;
 import com.android.volley.NoConnectionError;
 import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
@@ -33,7 +32,6 @@ import com.fixtter.sgtel.fixtter_user_android.Servicios.Volley_Servicio;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.Arrays;
 
 public class Activity_TipoCreacionUsuario extends AppCompatActivity {
@@ -52,7 +50,7 @@ public class Activity_TipoCreacionUsuario extends AppCompatActivity {
 
                 Dao_Clientes dao_clientes = new Dao_Clientes(getApplicationContext());
                 String propiedades = "email=" + email;
-                dao_clientes.Get_elemento_propiedades(propiedades, "", new Volley_Servicio.VolleyResponseListener() {
+                dao_clientes.Get_elemento_filtro(propiedades, "", new Volley_Servicio.VolleyResponseListener() {
                     @Override
                     public void onError(VolleyError message) {
                         System.out.println(message.toString());

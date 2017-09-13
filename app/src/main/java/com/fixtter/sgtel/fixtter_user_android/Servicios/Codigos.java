@@ -24,7 +24,7 @@ public class Codigos {
     /* CATEGORIAS */
     public static String GET_CATEGORIA_PROPIEDADES = "products/categories?";
     public static String GET_CATEGORIA_ID = "products/categories/";
-    public static String GET_CATEGORIA_ALL = "products/categories?";
+    public static String GET_CATEGORIA_ALL = "products/categories?per_page=50&";
     public static String GET_CATEGORIA_PAGE = "products/categories?page=";
     public static String SET_CATEGORIA = "products/categories?";
 

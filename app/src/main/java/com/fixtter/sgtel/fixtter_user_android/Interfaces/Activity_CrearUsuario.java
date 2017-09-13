@@ -85,7 +85,7 @@ public class Activity_CrearUsuario extends AppCompatActivity {
                         map.put("last_name", String.valueOf(txt_apellido.getText()));
                         map.put("password", String.valueOf(txt_pass.getText()));
                         String email = "email=" + txt_email.getText().toString();
-                        servicio.Get_elemento_propiedades(email, "", new Volley_Servicio.VolleyResponseListener() {
+                        servicio.Get_elemento_filtro(email, "", new Volley_Servicio.VolleyResponseListener() {
                             @Override
                             public void onError(VolleyError message) {
                                 Log.d("ERROR", message.toString());
