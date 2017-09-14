@@ -39,6 +39,13 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="pais_descripcion">Elija su país:</string>
+    <string name="reservar_siguiente">Siguiente</string>
+    <string name="reservar_fecha">Elija una fecha:</string>
+    <string name="reservar_hora">Elija una hora:</string>
+    <string name="reservar_descripcion1">¿Con que empezamos?</string>
+    <string name="reservar_descripcion2">¿Con que tener cuidado?</string>
+    <string name="reservar_descripcion3">Haznos una descripción detallada de lo que necesitas</string>
     <string name="action_settings">Settings</string>
 
     <!-- TODO: Remove or change this placeholder text -->

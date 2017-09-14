@@ -2,6 +2,8 @@ package com.fixtter.sgtel.fixtter_user_android.Adaptadores;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -14,6 +16,8 @@ import android.widget.TextView;
 
 import com.fixtter.sgtel.fixtter_user_android.Entidades.Categorias;
 import com.fixtter.sgtel.fixtter_user_android.Entidades.Producto;
+import com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_Elegir_Fixtter;
+import com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_Reservar_Fixtter;
 import com.fixtter.sgtel.fixtter_user_android.R;
 import com.squareup.picasso.Picasso;
 
@@ -37,6 +41,7 @@ public class Adapter_Productos extends RecyclerView.Adapter<Adapter_Productos.Li
 
         public ListaViewHolder(View v) {
             super(v);
+
             txt_nombre = (TextView)v.findViewById(R.id.txt_nombre);
             txt_descripcion = (TextView)v.findViewById(R.id.txt_descripcion);
             ratingBar = (RatingBar)v.findViewById(R.id.rating_fixtter);
@@ -66,17 +71,34 @@ public class Adapter_Productos extends RecyclerView.Adapter<Adapter_Productos.Li
     }
 
     @Override
-    public void onBindViewHolder(Adapter_Productos.ListaViewHolder viewHolder, int i) {
+    public void onBindViewHolder(Adapter_Productos.ListaViewHolder viewHolder, final int i) {
         //AQUI VAN TODOS LOS ELEMENTOS DE LA LISTA.
         viewHolder.txt_nombre.setText(items.get(i).getNombre());
-
+        viewHolder.txt_descripcion.setText("Precio: " + items.get(i).getPrecio());
         viewHolder.ratingBar.setRating((float) items.get(i).getRating());
-        String image = items.get(i).getImage_collection().get(0);
+        final String image = items.get(i).getImage_collection().get(0);
         Picasso.with(context)
                 .load(image)
                 .resize(150, 150)
                 .centerCrop()
                 .into(viewHolder.img_fixtter);
+    viewHolder.btn_comprar.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Fragment fragment = Fragment_Reservar_Fixtter.newInstance("",
+                    "");
+            Bundle bundle = fragment.getArguments();
+            bundle.putInt("ID",items.get(i).getId());
+            bundle.putString("NOMBRE",items.get(i).getNombre());
+            bundle.putString("IMAGEN",image);
+            fragment.setArguments(bundle);
+            fragmentManager
+                    .beginTransaction()
+                    .add(R.id.main_content, fragment)
+                    .addToBackStack(null)
+                    .commit();
+        }
+    });
 
     }
 }

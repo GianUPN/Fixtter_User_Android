@@ -31,6 +31,8 @@ public class Volley_Servicio{
     private static final String CLAVE_CLIENTE = "ck_0b6e946fd3720e02a6b865c287bac197ddbd56ed";
     private static final String CLAVE_SECRET = "cs_31fbd5b8a41b9eb34ea24b94005ab4833a128393";
     private static final String url = "https://www.fixtter.com.pe/wp-json/wc/v2/";
+    private static final String url_colombia = "https://www.fixtter.com.co/wp-json/wc/v2/";
+    private static final String url_colombia2 = "https://www.fixtter.com.co/wp-json/wc/v1/";
     private static final String url_2 = "https://www.fixtter.com.pe/wp-json/wc/v1/";
     private static final String TOKEN = "consumer_key=" + CLAVE_CLIENTE + "&consumer_secret=" + CLAVE_SECRET;
     private Context context;

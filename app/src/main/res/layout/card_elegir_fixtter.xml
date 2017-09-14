@@ -50,14 +50,16 @@
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_height="wrap_content">
+
             <Button
                 android:id="@+id/btn_reservar"
-                android:layout_width="150dp"
-                android:text="@string/card_reservar"
-                android:backgroundTint="@color/colorAccent"
-                android:textColor="@color/colorWhite"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_height="wrap_content" />
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:text="@string/card_reservar"
+                android:textColor="@color/colorWhite" />
+
             <Button
                 android:id="@+id/btn_masinfo"
                 android:layout_width="wrap_content"

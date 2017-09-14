@@ -1,0 +1,242 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Interfaces.Fragment_Reservar_Fixtter">
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/btn_siguiente"
+            android:layout_width="match_parent"
+            android:text="@string/reservar_siguiente"
+            android:layout_alignParentBottom="true"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:backgroundTint="@color/colorAccent"
+            android:textColor="@color/colorWhite"
+            android:layout_gravity="bottom"
+            android:layout_height="50dp" />
+
+    <ScrollView
+        android:layout_above="@+id/btn_siguiente"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/img_fixtter"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="2dp"
+                            android:src="@drawable/fixtterlogo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_nombre"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Giancarlo Calderón"
+                                android:textColor="@color/colorBlack" />
+
+                            <TextView
+                                android:id="@+id/txt_descripcion"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="" />
+
+                            <RatingBar
+                                android:id="@+id/rating_fixtter"
+                                style="?android:attr/ratingBarStyleIndicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:numStars="5" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorAccent"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_servicio"
+                        android:drawableRight="@android:drawable/arrow_down_float"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:backgroundTint="@color/colorAccent"
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Detalle del servicio:" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:id="@+id/zona_detalleservicio"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/editText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/rounded_border_edittext"
+                            android:gravity="center"
+                            android:hint="@string/reservar_descripcion3"
+                            android:lines="4" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_margin="5dp"
+                            android:lines="3"
+                            android:hint="@string/reservar_descripcion1"
+                            android:gravity="center"
+                            android:background="@drawable/rounded_border_edittext"
+                            android:layout_height="wrap_content" />
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_margin="5dp"
+                            android:lines="3"
+                            android:hint="@string/reservar_descripcion2"
+                            android:gravity="center"
+                            android:background="@drawable/rounded_border_edittext"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_fecha"
+                        android:drawableRight="@android:drawable/arrow_down_float"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:backgroundTint="@color/colorPrimaryDark"
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Fecha del servicio:" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:id="@+id/zona_fecha"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/txt_fecha"
+                            android:clickable="true"
+                            android:editable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:lines="2"
+                            android:hint="@string/reservar_fecha"
+                            android:background="@drawable/rounded_border_edittext"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_hora"
+                        android:drawableRight="@android:drawable/arrow_down_float"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:textColor="@color/colorWhite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Hora del servicio:" />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:id="@+id/zona_hora"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content">
+                        <EditText
+                            android:id="@+id/txt_hora"
+                            android:clickable="true"
+                            android:editable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:gravity="center"
+                            android:lines="2"
+                            android:hint="@string/reservar_hora"
+                            android:background="@drawable/rounded_border_edittext"
+                            />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

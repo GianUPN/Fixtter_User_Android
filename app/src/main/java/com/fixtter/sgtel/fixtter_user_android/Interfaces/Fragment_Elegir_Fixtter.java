@@ -83,6 +83,7 @@ public class Fragment_Elegir_Fixtter extends Fragment {
     }
     public void cargar_fixttersPorCategoria(){
         Dao_Products dao_products = new Dao_Products(getContext());
+        mParam1 = mParam1.replace(" ","%20");//CUIDAR ESPACIOS EN BLANCO
         dao_products.Get_lista_pagina_filtro_V1(pagina,"filter[product_cat]="+mParam1,"", new Volley_Servicio.VolleyResponseListener() {
             @Override
             public void onError(VolleyError message) {
@@ -104,6 +105,7 @@ public class Fragment_Elegir_Fixtter extends Fragment {
                         producto.setId(jsonObject.getInt("id"));
                         producto.setNombre(jsonObject.getString("name"));
                         producto.setRating(jsonObject.getDouble("average_rating"));
+                        producto.setPrecio(jsonObject.getDouble("price"));
                         try {
                             JSONArray imagearray = jsonObject.getJSONArray("images");
                             List<String> imagelist = new ArrayList<String>();

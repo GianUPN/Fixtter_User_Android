@@ -14,6 +14,7 @@ public class Producto {
     private String image_src;
     private List<String> image_collection = new ArrayList<>();
     private double rating;
+    private double precio;
 
     public int getId() {
         return id;
@@ -61,5 +62,13 @@ public class Producto {
 
     public void setRating(double rating) {
         this.rating = rating;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
 }

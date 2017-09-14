@@ -17,8 +17,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.fixtter.sgtel.fixtter_user_android.R;
+import com.fixtter.sgtel.fixtter_user_android.Servicios.AppPreferences;
 
 public class Navegacion_Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -26,6 +28,9 @@ public class Navegacion_Principal extends AppCompatActivity
     RelativeLayout relativeLayout;
     FloatingActionButton fab;
     Toolbar toolbar;
+    NavigationView navigationView;
+    TextView txt_nombre,txt_email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +38,7 @@ public class Navegacion_Principal extends AppCompatActivity
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         relativeLayout = (RelativeLayout) findViewById(R.id.main_content);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         listeners();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -40,6 +46,14 @@ public class Navegacion_Principal extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
+
+        View hView = navigationView.getHeaderView(0);
+        txt_nombre = (TextView)hView.findViewById(R.id.text_nombre);
+        txt_email = (TextView)hView.findViewById(R.id.text_correo);
+
+        AppPreferences appPreferences = new AppPreferences(getApplicationContext());
+        txt_nombre.setText(appPreferences.getUserName()+" "+appPreferences.getUserLastName());
+        txt_email.setText(appPreferences.getUserEmail());
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -133,6 +147,15 @@ public class Navegacion_Principal extends AppCompatActivity
         } else if (id == R.id.nav_camara) {
 
         } else if (id == R.id.nav_pais) {
+            fab.setVisibility(View.INVISIBLE);
+            Fragment fragment = Fragment_Cambiar_Pais.newInstance("", "");
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager
+                    .beginTransaction()
+                    .add(R.id.main_content, fragment)
+                    .addToBackStack(null)
+                    .commit();
+            //toolbar.setTitle(getString(R.string.Nav_Categorias));
 
         } else if (id == R.id.nav_logout) {
 
