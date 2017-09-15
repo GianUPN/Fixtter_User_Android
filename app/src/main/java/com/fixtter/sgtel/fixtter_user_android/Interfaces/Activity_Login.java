@@ -44,6 +44,7 @@ public class Activity_Login extends AppCompatActivity {
                 final String email = object.getString("email");
                 final String nombre = object.getString("first_name");
                 final String apellido = object.getString("last_name");
+                btn_correo.setEnabled(false);
 
                 Dao_Clientes dao_clientes = new Dao_Clientes(getApplicationContext());
                 String propiedades = "email=" + email;
@@ -60,6 +61,7 @@ public class Activity_Login extends AppCompatActivity {
                         if(message instanceof TimeoutError){
                             Snackbar.make(getWindow().getDecorView().getRootView(), "Exceso de tiempo de espera", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
+                            btn_correo.setEnabled(true);
                         }
                     }
 

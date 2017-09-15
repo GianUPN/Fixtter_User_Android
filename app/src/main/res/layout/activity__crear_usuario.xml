@@ -36,43 +36,50 @@
         <EditText
             android:id="@+id/txt_nombre"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_border_edittext"
             android:gravity="center"
             android:hint="@string/crearusuario_nombre"
             android:inputType="text"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/txt_apellido"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_border_edittext"
             android:gravity="center"
             android:hint="@string/crearusuario_apellido"
             android:inputType="text"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/txt_cell"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_border_edittext"
             android:gravity="center"
             android:hint="@string/crearusuario_celular"
             android:inputType="number"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
         <android.support.v7.widget.AppCompatSpinner
             android:id="@+id/spinner1"
             android:layout_width="250dp"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
+            android:textSize="15sp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_spinner"
@@ -85,26 +92,30 @@
         <EditText
             android:id="@+id/txt_email"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_border_edittext"
             android:gravity="center"
             android:hint="@string/crearusuario_correo"
             android:inputType="text"
-            android:textSize="20sp" />
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="15sp" />
 
         <EditText
             android:id="@+id/txt_pass"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
             android:layout_gravity="center"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_border_edittext"
             android:gravity="center"
-            android:hint="@string/crearusuario_contraseña"
+            android:hint="@string/crearusuario_contrasena"
             android:inputType="textPassword"
-            android:textSize="20sp" />
+            android:textSize="15sp" />
 
         <RelativeLayout
             android:layout_width="match_parent"

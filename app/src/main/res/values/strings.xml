@@ -4,13 +4,14 @@
     <string name="inicio_iniciosesion">Iniciar Sesion</string>
     <string name="inicio_nuevousuario">Crear Cuenta</string>
     <string name="inicio_llamar">Llamar ahora</string>
+    <string name="inicio_notienes">¿O no tienes cuenta?</string>
 
     <string name="title_activity_main">MainActivity</string>
 
     <string name="signin_tipo_crearusuario">Creacion de cuenta:</string>
     <string name="signin_crear_usuario">Crea una cuenta en Fixtter mediante:</string>
     <string name="signin_btnfacebook">Facebook</string>
-    <string name="singin_btnemail">correo electrónico</string>
+    <string name="singin_btnemail">Ingresar</string>
 
     <string name="facebook_app_id">132708830681243</string>
     <string name="fb_login_protocol_scheme">fb132708830681243</string>
@@ -21,14 +22,14 @@
     <string name="crearusuario_celular">Celular</string>
     <string name="crearusuario_pais">Pais</string>
     <string name="crearusuario_correo">Correo</string>
-    <string name="crearusuario_contraseña">Contrasena</string>
+    <string name="crearusuario_contrasena">Contraseña</string>
     <string name="crearusuario_btnregistrar">Registrar</string>
     <string name="title_activity_navegacion__principal">Flixtter</string>
 
     <string name="login_desc">Inicie sesion mediante:</string>
     <string name="login_tittle">Iniciar Sesión</string>
     <string name="login_olvido">Olvide mi contraseña</string>
-    <string name="login_o">o mediante:</string>
+    <string name="login_o">Usuario y contraseña:</string>
 
     <string name="Nav_solicitar">Pedir un Fixtter</string>
     <string name="Nav_mispedidos">Mis pedidos</string>
@@ -41,8 +42,8 @@
 
     <string name="pais_descripcion">Elija su país:</string>
     <string name="reservar_siguiente">Siguiente</string>
-    <string name="reservar_fecha">Elija una fecha:</string>
-    <string name="reservar_hora">Elija una hora:</string>
+    <string name="reservar_fecha">dd/mm/yyyy</string>
+    <string name="reservar_hora">hh:mm</string>
     <string name="reservar_descripcion1">¿Con que empezamos?</string>
     <string name="reservar_descripcion2">¿Con que tener cuidado?</string>
     <string name="reservar_descripcion3">Haznos una descripción detallada de lo que necesitas</string>
