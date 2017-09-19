@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.fixtter.sgtel.fixtter_user_android.Entidades.Categorias;
 import com.fixtter.sgtel.fixtter_user_android.Entidades.Producto;
+import com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_Conocer_Fixtter;
 import com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_Elegir_Fixtter;
 import com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_Reservar_Fixtter;
 import com.fixtter.sgtel.fixtter_user_android.R;
@@ -99,6 +100,21 @@ public class Adapter_Productos extends RecyclerView.Adapter<Adapter_Productos.Li
                     .commit();
         }
     });
+        viewHolder.btn_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = Fragment_Conocer_Fixtter.newInstance(String.valueOf(items.get(i).getId()),
+                        String.valueOf(items.get(i).getId()));
+                Bundle bundle = fragment.getArguments();
+                bundle.putString("ID", String.valueOf(items.get(i).getId()));
+                fragment.setArguments(bundle);
+                fragmentManager
+                        .beginTransaction()
+                        .add(R.id.main_content, fragment)
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
 
     }
 }

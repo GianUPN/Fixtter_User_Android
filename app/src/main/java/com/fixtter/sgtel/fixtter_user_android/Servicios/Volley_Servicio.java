@@ -154,6 +154,42 @@ public class Volley_Servicio{
         }
     }
 
+    public void Get_elemento(String id,String tabla,final VolleyResponseListener request){
+        try {
+            //evitar SSL
+            nuke();// Eliminar esto cuando se publique el servidor.
+            // Crear nueva cola de peticiones
+            RequestQueue requestQueue = Volley.newRequestQueue(context);
+            String URL = url + tabla  + id +"?"+TOKEN;
+            JsonObjectRequest getrequest = new JsonObjectRequest(Request.Method.GET, URL, null,
+                    new Response.Listener<JSONObject>() {
+                        @Override
+                        public void onResponse(JSONObject response) {
+                            // muestra response
+                            Log.d("Response", response.toString());
+                            request.onResponse(response);
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            //muestra error
+                            Log.d("Error.Response", error.toString());
+                            request.onError(error);
+                        }
+                    }
+            );
+            // add it to the RequestQueue
+            getrequest.setRetryPolicy(new DefaultRetryPolicy(90000,
+                    DefaultRetryPolicy.DEFAULT_MAX_RETRIES,
+                    DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+            //time MS
+            requestQueue.add(getrequest);
+            requestQueue.start();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
     //TODO: EXCEPCION PARA LISTADO DE FIXTTERS POR CATEGORIA
     public void Get_lista_pagina_filtro_V1(int pagina, String parametros,String tabla,final VolleyResponseListener request){
         try {

@@ -89,7 +89,7 @@ public class Fragment_Elegir_Fixtter extends Fragment {
             public void onError(VolleyError message) {
                 System.out.println(message.toString());
                 if(message instanceof NoConnectionError){
-                    Snackbar.make(getView(), "Error de conexion", Snackbar.LENGTH_LONG)
+                    Snackbar.make(getView(), "Conectando", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                     cargar_fixttersPorCategoria();
                 }
