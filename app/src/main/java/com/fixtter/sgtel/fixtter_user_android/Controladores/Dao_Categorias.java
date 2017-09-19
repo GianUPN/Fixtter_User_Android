@@ -17,12 +17,7 @@ public class Dao_Categorias extends Volley_Servicio{
     }
     @Override
     public void Get_lista_all(String a,Volley_Servicio.VolleyResponseListener request) {
-        super.Get_lista_all( Codigos.GET_CATEGORIA_ALL,request);
-    }
-
-    @Override
-    public void Get_elemento_filtro(String propiedades, String a, Volley_Servicio.VolleyResponseListener request) {
-        super.Get_elemento_filtro(propiedades, Codigos.GET_CATEGORIA_PROPIEDADES,request);
+        super.Get_lista_all( Codigos.GET_CATEGORIA_ALL_V1,request);
     }
 
     @Override

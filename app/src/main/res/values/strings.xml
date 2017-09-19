@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Fixtter_User_Android</string>
+    <string name="app_name">Fixtter</string>
     <string name="inicio_bienvenido">Bienvenido a:</string>
     <string name="inicio_iniciosesion">Iniciar Sesion</string>
     <string name="inicio_nuevousuario">Crear Cuenta</string>
@@ -24,7 +24,7 @@
     <string name="crearusuario_correo">Correo</string>
     <string name="crearusuario_contrasena">Contraseña</string>
     <string name="crearusuario_btnregistrar">Registrar</string>
-    <string name="title_activity_navegacion__principal">Flixtter</string>
+    <string name="title_activity_navegacion__principal">Fixtter</string>
 
     <string name="login_desc">Inicie sesion mediante:</string>
     <string name="login_tittle">Iniciar Sesión</string>
@@ -36,7 +36,7 @@
     <string name="Nav_detalle">La ayuda de confianza que necesitas</string>
     <string name="Nav_Categorias">Categorías</string>
     <string name="card_reservar">Reservar</string>
-    <string name="card_info">Más info</string>
+    <string name="card_info">Conóceme</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 

@@ -50,24 +50,23 @@
             android:orientation="horizontal"
             android:gravity="center"
             android:layout_height="wrap_content">
-
+            <Button
+                android:id="@+id/btn_masinfo"
+                android:layout_width="150dp"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="@color/colorWhite"
+                android:text="@string/card_info"
+                android:layout_gravity="left"
+                android:layout_height="match_parent" />
             <Button
                 android:id="@+id/btn_reservar"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/colorAccent"
+                android:backgroundTint="@color/colorPrimary"
                 android:text="@string/card_reservar"
                 android:textColor="@color/colorWhite" />
-
-            <Button
-                android:id="@+id/btn_masinfo"
-                android:layout_width="wrap_content"
-                style="@style/Widget.AppCompat.Button.Colored"
-                android:backgroundTint="@color/colorGreen"
-                android:textColor="@color/colorWhite"
-                android:text="@string/card_info"
-                android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
 

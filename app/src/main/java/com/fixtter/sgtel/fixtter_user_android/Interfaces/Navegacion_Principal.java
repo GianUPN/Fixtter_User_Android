@@ -1,5 +1,6 @@
 package com.fixtter.sgtel.fixtter_user_android.Interfaces;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,6 +20,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.facebook.login.LoginManager;
 import com.fixtter.sgtel.fixtter_user_android.R;
 import com.fixtter.sgtel.fixtter_user_android.Servicios.AppPreferences;
 
@@ -142,11 +144,14 @@ public class Navegacion_Principal extends AppCompatActivity
 
         if (id == R.id.nav_inicio) {
             // Handle the camera action
-        } else if (id == R.id.nav_editar) {
+
+        }
+        /*else if (id == R.id.nav_editar) {
 
         } else if (id == R.id.nav_camara) {
 
-        } else if (id == R.id.nav_pais) {
+        }*/
+        else if (id == R.id.nav_pais) {
             fab.setVisibility(View.INVISIBLE);
             Fragment fragment = Fragment_Cambiar_Pais.newInstance("", "");
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -158,7 +163,14 @@ public class Navegacion_Principal extends AppCompatActivity
             //toolbar.setTitle(getString(R.string.Nav_Categorias));
 
         } else if (id == R.id.nav_logout) {
-
+            try {
+                LoginManager.getInstance().logOut();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+            Intent intent = new Intent(getApplicationContext(), Inicio.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

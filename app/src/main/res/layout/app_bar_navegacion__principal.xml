@@ -25,7 +25,7 @@
     <LinearLayout
         android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="match_parent"
-        android:background="@drawable/fondo_pantalla"
+        android:background="@color/colorWhite"
         android:orientation="vertical"
 
         android:layout_height="match_parent">
@@ -54,14 +54,19 @@
                 android:layout_width="match_parent"
                 android:layout_gravity="center_vertical"
                 android:gravity="center"
+                android:background="@drawable/rounded_border_button"
                 android:text="@string/Nav_solicitar"
+                android:backgroundTint="@color/colorOrange"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:textColor="@color/colorWhite"
+                android:layout_marginBottom="15dp"
                 android:layout_height="wrap_content" />
             <Button
                 android:id="@+id/btn_pedidos"
                 android:layout_width="match_parent"
                 android:layout_gravity="center"
+                android:background="@drawable/rounded_border_button"
+                android:backgroundTint="@color/colorPrimaryDark"
                 android:text="@string/Nav_mispedidos"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:textColor="@color/colorWhite"
@@ -74,17 +79,17 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom|center"
         app:fabSize="normal"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@drawable/ic_phone_white_48dp" />
 
     <RelativeLayout
         android:id="@+id/main_content"
-        android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="match_parent"
-        android:fitsSystemWindows="true"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fitsSystemWindows="true">
 
     </RelativeLayout>
 

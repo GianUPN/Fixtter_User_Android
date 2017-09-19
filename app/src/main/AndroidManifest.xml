@@ -7,9 +7,9 @@
     <application
         android:allowBackup="true"
         android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/fix_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/fix_launcher_rounded"
         android:supportsRtl="true">
         <activity
             android:name=".Interfaces.Inicio"

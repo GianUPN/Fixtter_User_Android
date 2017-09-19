@@ -26,6 +26,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
             android:orientation="vertical">
 
             <android.support.v7.widget.CardView
@@ -87,12 +88,14 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
                 android:backgroundTint="@color/colorAccent"
                 android:layout_margin="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
                     android:orientation="vertical">
 
                     <Button
@@ -108,6 +111,7 @@
                     <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
+                        android:animateLayoutChanges="true"
                         android:id="@+id/zona_detalleservicio"
                         android:visibility="gone"
                         android:layout_height="wrap_content">
@@ -147,12 +151,14 @@
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
                 android:backgroundTint="@color/colorPrimaryDark"
                 android:layout_margin="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
                     android:orientation="vertical">
 
                     <Button
@@ -170,6 +176,7 @@
                         android:layout_width="match_parent"
                         android:id="@+id/zona_fecha"
                         android:visibility="gone"
+                        android:animateLayoutChanges="true"
                         android:layout_height="wrap_content">
                         <EditText
                             android:id="@+id/txt_fecha"
@@ -194,11 +201,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorPrimary"
+                android:animateLayoutChanges="true"
                 android:layout_margin="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
                     android:orientation="vertical">
 
                     <Button
@@ -216,6 +225,7 @@
                         android:layout_width="match_parent"
                         android:id="@+id/zona_hora"
                         android:visibility="gone"
+                        android:animateLayoutChanges="true"
                         android:layout_height="wrap_content">
                         <EditText
                             android:id="@+id/txt_hora"

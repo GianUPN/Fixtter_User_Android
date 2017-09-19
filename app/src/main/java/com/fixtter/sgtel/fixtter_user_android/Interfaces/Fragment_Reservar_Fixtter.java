@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageView;
@@ -138,7 +140,17 @@ public class Fragment_Reservar_Fixtter extends Fragment {
                 new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
+                        String sday="", smonth="";
+                        if(dayOfMonth<10)
+                            sday = "0"+dayOfMonth;
+                        else
+                            sday = dayOfMonth+"";
+                        if(month<10)
+                            smonth = "0"+month;
+                        else
+                            smonth = "" + month;
+                        String date = sday+"/"+smonth+"/"+year;
+                        txt_fecha.setText(date);
                     }
                 }, Calendar.getInstance().get(Calendar.YEAR),
                         Calendar.getInstance().get(Calendar.MONTH),
@@ -151,7 +163,17 @@ public class Fragment_Reservar_Fixtter extends Fragment {
                 new TimePickerDialog(getContext(), new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-
+                        String shour="",sminute="";
+                        if(hourOfDay<10)
+                            shour = "0"+hourOfDay;
+                        else
+                            shour = hourOfDay+"";
+                        if(minute<10)
+                            sminute = "0"+minute;
+                        else
+                            sminute = minute+"";
+                        String time = shour+":"+sminute;
+                        txt_hora.setText(time);
                     }
                 },Calendar.getInstance().get(Calendar.HOUR),
                         Calendar.getInstance().get(Calendar.MINUTE),true).show();

@@ -50,17 +50,17 @@ public class Activity_TipoCreacionUsuario extends AppCompatActivity {
 
                 Dao_Clientes dao_clientes = new Dao_Clientes(getApplicationContext());
                 String propiedades = "email=" + email;
-                dao_clientes.Get_elemento_filtro(propiedades, "", new Volley_Servicio.VolleyResponseListener() {
+                dao_clientes.Get_lista_filtro(propiedades, "", new Volley_Servicio.VolleyResponseListener() {
                     @Override
                     public void onError(VolleyError message) {
                         System.out.println(message.toString());
                         if(message instanceof NoConnectionError){
-                            Snackbar.make(getWindow().getDecorView().getRootView(), "Error de conexion", Snackbar.LENGTH_LONG)
+                            Snackbar.make(getCurrentFocus(), "Conectando", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
                             request.executeAsync();
                         } else
                         if(message instanceof TimeoutError){
-                            Snackbar.make(getWindow().getDecorView().getRootView(), "Exceso de tiempo de espera", Snackbar.LENGTH_LONG)
+                            Snackbar.make(getCurrentFocus(), "Exceso de tiempo de espera", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
                         }
                     }
@@ -69,7 +69,7 @@ public class Activity_TipoCreacionUsuario extends AppCompatActivity {
                     public void onResponse(Object response) {
                         JSONArray jsonArray = (JSONArray) response;
                         if(jsonArray.length()>0) {
-                            Snackbar.make(getWindow().getDecorView().getRootView(), "Usuario ya existe", Snackbar.LENGTH_LONG)
+                            Snackbar.make(getCurrentFocus(), "Usuario ya existe", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
                             System.out.println(response.toString());
                             try {
@@ -84,7 +84,7 @@ public class Activity_TipoCreacionUsuario extends AppCompatActivity {
                                 finish();
                             }catch (Exception e){e.printStackTrace();}
                         }else{
-                            Snackbar.make(getWindow().getDecorView().getRootView(), "Nuevo Usuario", Snackbar.LENGTH_LONG)
+                            Snackbar.make(getCurrentFocus(), "Nuevo Usuario", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
                             System.out.println(response.toString());
                             Intent intent = new Intent(getApplicationContext(), Activity_CrearUsuario.class);

@@ -5,7 +5,9 @@
     <color name="colorAccent">#662D91</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
-    <color name="colorGreen">#C8D620</color>
+    <color name="colorGreen">#c7d520</color>
     <color name="colorRosa">#9B1B9B</color>
+    <color name="colorYellow">#F9FF00</color>
+    <color name="colorOrange">#e4b13f</color>
 
 </resources>

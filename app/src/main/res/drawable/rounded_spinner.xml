@@ -10,7 +10,7 @@
                         android:angle="270" />
                     <stroke
                         android:width="2dp"
-                        android:color="@color/colorPrimary" />
+                        android:color="@color/colorOrange" />
                     <corners
                         android:radius="10dp" />
                     <padding

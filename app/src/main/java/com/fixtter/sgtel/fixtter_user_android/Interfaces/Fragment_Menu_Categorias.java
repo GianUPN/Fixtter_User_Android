@@ -102,7 +102,7 @@ public class Fragment_Menu_Categorias extends Fragment {
                         categorias.setNombre(jsonObject.getString("name"));
                         categoriasList.add(categorias);
                     }
-                    adapter = new Adapter_Categorias(categoriasList,getFragmentManager());
+                    adapter = new Adapter_Categorias(categoriasList,getFragmentManager(),getContext());
                     recycler_categorias.setAdapter(adapter);
                 }catch (Exception e){e.printStackTrace();}
             }

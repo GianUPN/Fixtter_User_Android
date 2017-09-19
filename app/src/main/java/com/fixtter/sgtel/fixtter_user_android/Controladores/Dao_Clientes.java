@@ -21,8 +21,13 @@ public class Dao_Clientes extends Volley_Servicio{
     }
 
     @Override
-    public void Get_elemento_filtro(String propiedades, String a, VolleyResponseListener request) {
-        super.Get_elemento_filtro(propiedades, Codigos.GET_CLIENTES_PROPIEDADES,request);
+    public void Login_password(String propiedades, String a, VolleyResponseListener request) {
+        super.Login_password(propiedades, Codigos.LOGIN_PASSWORD,request);
+    }
+
+    @Override
+    public void Get_lista_filtro(String filtro, String a, VolleyResponseListener request) {
+        super.Get_lista_filtro(filtro, Codigos.GET_CLIENTES_PROPIEDADES,request);
     }
 
     @Override
