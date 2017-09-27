@@ -311,7 +311,7 @@ public class Volley_Servicio{
     }
 
 
-    private static void nuke() {
+    public static void nuke() {
         try {
             TrustManager[] trustAllCerts = new TrustManager[] {
                     new X509TrustManager() {

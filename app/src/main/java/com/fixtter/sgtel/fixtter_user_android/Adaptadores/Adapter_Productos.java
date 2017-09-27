@@ -19,6 +19,7 @@ import com.fixtter.sgtel.fixtter_user_android.Entidades.Producto;
 import com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_Conocer_Fixtter;
 import com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_Elegir_Fixtter;
 import com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_Reservar_Fixtter;
+import com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_WEB_Reservar_Fixtter;
 import com.fixtter.sgtel.fixtter_user_android.R;
 import com.squareup.picasso.Picasso;
 
@@ -86,7 +87,7 @@ public class Adapter_Productos extends RecyclerView.Adapter<Adapter_Productos.Li
     viewHolder.btn_comprar.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Fragment fragment = Fragment_Reservar_Fixtter.newInstance("",
+            Fragment fragment = Fragment_WEB_Reservar_Fixtter.newInstance("",
                     "");
             Bundle bundle = fragment.getArguments();
             bundle.putInt("ID",items.get(i).getId());

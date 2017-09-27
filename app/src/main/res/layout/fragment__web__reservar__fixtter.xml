@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context="com.fixtter.sgtel.fixtter_user_android.Interfaces.Fragment_WEB_Reservar_Fixtter">
+
+    <!-- TODO: Update blank fragment layout -->
+    <WebView
+        android:id="@+id/webview_reserva"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </WebView>
+
+</FrameLayout>
